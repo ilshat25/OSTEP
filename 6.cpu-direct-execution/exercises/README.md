@@ -4,10 +4,10 @@
 
 ### Cost of system call (0-byte read)
 
-start time: 1689742487813352 ms\
-end time: 1689742487880254 ms\
-diff: 66902 ms\
-it's *~0.67 ms* for a system call (0-byte read)
+start time: 1689742487813352 us\
+end time: 1689742487880254 us\
+diff: 66902 us\
+it's *~0.67 us* for a system call (0-byte read)
 
 ### Cost of context switch
 
@@ -16,7 +16,9 @@ But the time doesn't change netherless I tried to set only 1 code.
 
 The time of 4 system calls are substracted from the result as in 1 loop 2 read and 2 write are performed.
 
-start time: 1689746977185639 ms\
-end time: 1689746977884850 ms\
-diff: 699211 ms\
-it's *~4.31* ms for a context switch
+start time: 1689834607608190 us \
+end time: 1689834608306351 us \
+diff: 698161 us \
+it's *~4.30* us for a context switch
+
+a bit too long, I think I miss something, need to be revisited later... 

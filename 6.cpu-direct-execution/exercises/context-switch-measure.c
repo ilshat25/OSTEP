@@ -50,6 +50,7 @@ int main(int argc, char* argv[]) {
 
     int fd1[2];
     int fd2[2];
+    char ch;
     pipe(fd1);
     pipe(fd2);
     int rc = fork();
@@ -57,7 +58,6 @@ int main(int argc, char* argv[]) {
         fprintf(stderr, "fork error...\n");
         return -1;
     } else if (rc == 0) {
-        char ch;
         for (int i = 0; i < N; ++i) {
             read(fd1[0], &ch, 1);
             write(fd2[1], "b", 1);
@@ -65,8 +65,6 @@ int main(int argc, char* argv[]) {
         return 0;
     }
 
-    char ch;
-    
     struct timeval start, end;
     if (gettimeofday(&start, NULL) < 0) {
         fprintf(stderr, "gettimeofday error...\n");
@@ -82,8 +80,8 @@ int main(int argc, char* argv[]) {
     unsigned long long startTime = start.tv_sec * 1000000 + start.tv_usec;
     unsigned long long endTime = end.tv_sec * 1000000 + end.tv_usec; 
     unsigned long long diff = endTime - startTime;
-    printf("start time: %lld ms\nend time: %lld ms\ndiff: %lld ms\n",
+    printf("start time: %lld us\nend time: %lld us\ndiff: %lld us\n",
         startTime, endTime, diff);
-    printf("it's ~%.2f ms for a context switch\n", (double)diff / N - 4 * systemCallTime);
+    printf("it's ~%.2f us for a context switch\n", (double)diff / N - 4 * systemCallTime);
     return 0;
 }

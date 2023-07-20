@@ -23,8 +23,8 @@ int main(int argc, char* argv[]) {
     unsigned long long startTime = start.tv_sec * 1000000 + start.tv_usec;
     unsigned long long endTime = end.tv_sec * 1000000 + end.tv_usec; 
     unsigned long long diff = endTime - startTime;
-    printf("start time: %lld ms\nend time: %lld ms\ndiff: %lld ms\n",
+    printf("start time: %lld us\nend time: %lld us\ndiff: %lld us\n",
         startTime, endTime, diff);
-    printf("it's ~%.2f ms for a system call (0-byte read)\n", (double)diff / N);
+    printf("it's ~%.2f us for a system call (0-byte read)\n", (double)diff / N);
     return 0;
 }

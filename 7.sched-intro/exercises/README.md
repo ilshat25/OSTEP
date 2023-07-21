@@ -6,7 +6,7 @@
 
 FIFO:
 
-Job 0 -- Response: 0,   Turnaround: 200, Wait: 0 \ 
+Job 0 -- Response: 0,   Turnaround: 200, Wait: 0 \
 Job 1 -- Response: 200, Turnaround: 400, Wait: 200 \
 Job 2 -- Response: 400, Turnaround: 600, Wait: 400
 
@@ -16,7 +16,7 @@ Avg Wait:       (0 + 200 + 400) / 3 = 200
 
 SJF:
 
-Job 0 -- Response: 0,   Turnaround: 200, Wait: 0 \ 
+Job 0 -- Response: 0,   Turnaround: 200, Wait: 0 \
 Job 1 -- Response: 200, Turnaround: 400, Wait: 200 \
 Job 2 -- Response: 400, Turnaround: 600, Wait: 400 \
 

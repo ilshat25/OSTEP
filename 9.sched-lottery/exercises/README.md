@@ -176,3 +176,5 @@ in average U: (78 + 99 + 97 + 98 + 88) / 5 = 92.0
 ```$ python lottery-plot.py stride```
 
 ![Stride Scheduler Fairness](./stride.png)
+
+Is's worth to explore response and turnaround times.

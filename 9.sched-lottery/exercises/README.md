@@ -113,3 +113,66 @@ Random 634861 % 6 = 1       -> Job 2 (0 left) finished
 The job 0 will starve but it has 1 / 101 chance to be assigned to cpu and run before job 1 completes on every step.
 In general the job 0 will ever run before job 1 with probability: $$\sum_{i=1}^{10} C_{10}^i (\frac{1}{101})^i (\frac{100}{101})^{10-i} = 0.0947$$
 
+## Exercise 3
+
+### When running with two jobs of length 100 and equal ticket allocations of 100 (-l 100:100,100:100), how unfair is the scheduler? Run with some different random seeds to determine the (probabilistic) answer; let unfairness be determined by how much earlier one job finishes than the other.
+
+```
+$ python lottery.py -s 100 -l 100:100,100:100 -c
+diff: 200 - 185 = 15
+U: 185 / 200 = 92.5
+$ python lottery.py -s 200 -l 100:100,100:100 -c
+diff: 200 - 197 = 3
+U: 197 / 200 = 98.5
+$ python lottery.py -s 300 -l 100:100,100:100 -c
+diff: 200 - 198 = 2
+U: 198 / 200 = 99
+$ python lottery.py -s 400 -l 100:100,100:100 -c
+diff: 200 - 195 = 5
+U: 195 / 200 = 97.5
+$ python lottery.py -s 500 -l 100:100,100:100 -c
+diff: 200 - 186 = 14
+U: 186 / 200 = 93
+
+in average diff: (15 + 3 + 2 + 5 + 14) / 5 = 7.8
+in average U: (92.5 + 98.5 + 99 + 97.5 + 93) / 5 = 96.1
+```
+
+## Exercise 4
+
+### How does your answer to the previous question change as the quantum size (-q) gets larger?
+
+As the quantum size is growing the fairness becomes more because the number of lotteries is falling. Actually it's the same as cut the length of jobs 
+
+```
+python lottery.py -s 100 -l 100:100,100:100 -q 2 -c
+diff: 200 - 158 = 42
+U: 158 / 200 = 78
+python lottery.py -s 200 -l 100:100,100:100 -q 2 -c
+diff: 200 - 198 = 2
+U: 198 / 200 = 99
+python lottery.py -s 300 -l 100:100,100:100 -q 2 -c
+diff: 200 - 194 = 6
+U: 194 / 200 = 97
+python lottery.py -s 400 -l 100:100,100:100 -q 2 -c
+diff: 200 - 196 = 4
+U: 158 / 200 = 98
+python lottery.py -s 500 -l 100:100,100:100 -q 2 -c
+diff: 200 - 176 = 24
+U: 158 / 200 = 88
+
+in average diff: (42 + 2 + 6 + 4 + 24) / 5 = 15.6
+in average U: (78 + 99 + 97 + 98 + 88) / 5 = 92.0
+```
+
+## Exercise 5
+
+### Can you make a version of the graph that is found in the chapter? What else would be worth exploring? How would the graph look with a stride scheduler?
+
+`$ python lottery-plot.py lottery`
+
+![Lottery Scheduler Fairness](./lottery.png)
+
+`$ python lottery-plot.py stride`
+
+![Stride Scheduler Fairness](./stride.png)

@@ -33,7 +33,7 @@ for i in range(30):
 
 fig = plt.figure()
 x = np.linspace(1, 1000, 1000)
-plt.plot(x, [u / 30 for u in uList], color='orange')
+plt.plot(x, [u / 30 for u in uList], color='blue')
 plt.ylim(0, 1)
 plt.margins(0)
 plt.xlabel('Job Length')

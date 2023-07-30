@@ -169,10 +169,10 @@ in average U: (78 + 99 + 97 + 98 + 88) / 5 = 92.0
 
 ### Can you make a version of the graph that is found in the chapter? What else would be worth exploring? How would the graph look with a stride scheduler?
 
-`$ python lottery-plot.py lottery`
+```$ python lottery-plot.py lottery```
 
 ![Lottery Scheduler Fairness](./lottery.png)
 
-`$ python lottery-plot.py stride`
+```$ python lottery-plot.py stride```
 
 ![Stride Scheduler Fairness](./stride.png)

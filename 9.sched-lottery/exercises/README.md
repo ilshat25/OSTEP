@@ -111,4 +111,5 @@ Random 634861 % 6 = 1       -> Job 2 (0 left) finished
 `$ python lottery.py -s 100 -l 10:1,10:100  -c`
 
 The job 0 will starve but it has 1 / 101 chance to be assigned to cpu and run before job 1 completes on every step.
-In general the job 0 will ever run before job 1 with probability: $$\sum_{i=1}^10 C_{10}^i (\frac{1}{101})^i (\frac{100}{101})^{10-i} = 0.0947$$
+In general the job 0 will ever run before job 1 with probability: $$\sum_{i=1}^{10} C_{10}^i (\frac{1}{101})^i (\frac{100}{101})^{10-i} = 0.0947$$
+

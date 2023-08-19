@@ -74,6 +74,7 @@ class StrideScheduler(BaseScheduler):
                 min_pass_job = job
         return min_pass_job
 
+
 if __name__ == '__main__':
     lottery = LotteryScheduler()
     print(lottery.run(2, 100))

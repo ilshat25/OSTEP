@@ -173,3 +173,15 @@ ilssshat$ valgrind --leak-check=yes ./mem-invalid-write-after-free
 ==20794== 
 ...
 ```
+
+## Exercise 8
+
+### Try out some of the other interfaces to memory allocation. For example, create a simple vector-like data structure and related routines that use realloc() to manage the vector. Use an array to store the vectors elements; when a user adds an entry to the vector, use realloc() to allocate more space for it. How well does such a vector perform? How does it compare to a linked list? Use valgrind to help you find bugs.
+
+TODO
+
+## Exercise 9
+
+### Spend more time and read about using gdb and valgrind. Knowing your tools is critical; spend the time and learn how to become an expert debugger in the UNIX and C environment.
+
+TODO

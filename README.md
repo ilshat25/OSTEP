@@ -11,3 +11,4 @@ I do exercises and make some notes while reading a book.
 - [8. Scheduler MLFQ](https://github.com/ilshat25/OSTEP/tree/main/8.sched-mlfq/exercises/README.md)
 - [9. Scheduler Proportional Share](https://github.com/ilshat25/OSTEP/tree/main/9.sched-lottery/exercises/README.md)
 - [13. Address Space](https://github.com/ilshat25/OSTEP/tree/main/13.mem-intro/exercises/README.md)
+- [14. Memory API](https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/README.md)

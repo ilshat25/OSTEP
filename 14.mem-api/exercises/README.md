@@ -4,7 +4,7 @@
 
 ### First, write a simple program called null.c that creates a pointer to an integer, sets it to NULL, and then tries to dereference it. Compile this into an executable called null. What happens when you run this program?
 
-(null.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/null.c]
+[null.c](https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/null.c)
 
 ```
 ilssshat$ gcc -o null null.c
@@ -49,7 +49,7 @@ ilssshat$ valgrind --leak-check=yes ./null
 
 ### Write a simple program that allocates memory using malloc() but forgets to free it before exiting. What happens when this program runs? Can you use gdb to find any problems with it? How about valgrind (again with the --leak-check=yes flag)?
 
-(mem-alloc.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-alloc.c]
+[mem-alloc.c](https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-alloc.c)
 
 As was said on the book, for little programs it's not critical not to free memory before exit, because the OS do this anyway.
 Nothing was found using gdb.
@@ -66,7 +66,7 @@ valgrind noticed that some memory was not freed:
 
 ### Write a program that creates an array of integers called data of size 100 using malloc; then, set data[100] to zero. What happens when you run this program? What happens when you run this program using valgrind? Is the program correct?
 
-(mem-invalid-out-border.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-out-border.c]
+[mem-invalid-out-border.c](https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-out-border.c)
 
 ```
 ilssshat$ ./mem-invalid-out-border
@@ -105,10 +105,10 @@ The program is not correct, it tries to assign value out of array border that le
 
 ### Create a program that allocates an array of integers (as above),frees them, and then tries to print the value of one of the elements of the array. Does the program run? What happens when you use valgrind on it?
 
-(mem-invalid-read-out-border.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-read-out-border.c]
+(mem-invalid-read-after-free.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-read-after-free.c]
 
 ```
-ilssshat$ ./mem-invalid-read-out-border
+ilssshat$ ./mem-invalid-read-after-free
 Array of size=100 was allocated on address 0x7fc8b6705ac0
 Array was freed
 Try to print value after free
@@ -118,16 +118,16 @@ x[50] = 0
 In contrast with previous exercise there's no error on program execute.
 
 ```
-ilssshat$ valgrind --leak-check=yes ./mem-invalid-read-out-border
+ilssshat$ valgrind --leak-check=yes ./mem-invalid-read-after-free
 ...
 ==20688== Invalid read of size 4
-==20688==    at 0x100003F1B: main (mem-invalid-read-out-border.c:11)
+==20688==    at 0x100003F1B: main (mem-invalid-read-after-free.c:11)
 ==20688==  Address 0x1001c65d8 is 200 bytes inside a block of size 400 free'd
 ==20688==    at 0x1001ACF6E: free (in /usr/local/Cellar/valgrind/HEAD-8c360fc/libexec/valgrind/vgpreload_memcheck-amd64-darwin.so)
-==20688==    by 0x100003EFA: main (mem-invalid-read-out-border.c:8)
+==20688==    by 0x100003EFA: main (mem-invalid-read-after-free.c:8)
 ==20688==  Block was alloc'd at
 ==20688==    at 0x1001AB4F8: malloc (in /usr/local/Cellar/valgrind/HEAD-8c360fc/libexec/valgrind/vgpreload_memcheck-amd64-darwin.so)
-==20688==    by 0x100003ED6: main (mem-invalid-read-out-border.c:6)
+==20688==    by 0x100003ED6: main (mem-invalid-read-after-free.c:6)
 ==20688== 
 ...
 ```
@@ -138,7 +138,7 @@ But valgrind is still seeing the problem.
 
 ### Now pass a funny value to free (e.g., a pointer in the middle of the array you allocated above). What happens? Do you need tools to find this type of problem?
 
-(mem-invalid-write-out-border.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-write-out-border.c]
+(mem-invalid-write-after-free.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-write-after-free.c]
 
 ```
 ilssshat$ ./mem-invalid-write-after-free

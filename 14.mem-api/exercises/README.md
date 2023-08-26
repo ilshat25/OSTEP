@@ -105,7 +105,7 @@ The program is not correct, it tries to assign value out of array border that le
 
 ### Create a program that allocates an array of integers (as above),frees them, and then tries to print the value of one of the elements of the array. Does the program run? What happens when you use valgrind on it?
 
-(mem-invalid-read-after-free.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-read-after-free.c]
+[mem-invalid-read-after-free.c](https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-read-after-free.c)
 
 ```
 ilssshat$ ./mem-invalid-read-after-free
@@ -138,7 +138,7 @@ But valgrind is still seeing the problem.
 
 ### Now pass a funny value to free (e.g., a pointer in the middle of the array you allocated above). What happens? Do you need tools to find this type of problem?
 
-(mem-invalid-write-after-free.c)[https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-write-after-free.c]
+[mem-invalid-write-after-free.c](https://github.com/ilshat25/OSTEP/tree/main/14.mem-api/exercises/mem-invalid-write-after-free.c)
 
 ```
 ilssshat$ ./mem-invalid-write-after-free

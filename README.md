@@ -15,3 +15,4 @@ I do exercises and make some notes while reading a book.
 - [15. Address Translation](https://github.com/ilshat25/OSTEP/tree/main/15.mem-address-translation/exercises/README.md)
 - [16. Segmentation](https://github.com/ilshat25/OSTEP/tree/main/16.segmentation/exercises/README.md)
 - [17. Free Space Management](https://github.com/ilshat25/OSTEP/tree/main/17.free-space-management/exercises/README.md)
+- [18. Paging: Introduction](https://github.com/ilshat25/OSTEP/tree/main/18.paging-into/exercises/README.md)

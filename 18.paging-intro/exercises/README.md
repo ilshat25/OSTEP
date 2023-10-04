@@ -1,4 +1,4 @@
-# Chapter 18. PAGINF: INTRODUCTION
+# Chapter 18. PAGING: INTRODUCTION
 
 ## Exercise 1
 

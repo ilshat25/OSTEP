@@ -16,3 +16,4 @@ I do exercises and make some notes while reading a book.
 - [16. Segmentation](https://github.com/ilshat25/OSTEP/tree/main/16.segmentation/exercises/README.md)
 - [17. Free Space Management](https://github.com/ilshat25/OSTEP/tree/main/17.free-space-management/exercises/README.md)
 - [18. Paging: Introduction](https://github.com/ilshat25/OSTEP/tree/main/18.paging-intro/exercises/README.md)
+- [19. Paging: TLBs](https://github.com/ilshat25/OSTEP/tree/main/19.paging-tlbs/exercises/README.md)

@@ -24,7 +24,19 @@ About 10000 trials is need on my mac 2018.
 
 There's some result:
 
-macbook pro 2018:
+macbook pro 2018, 2,3 GHz Quad-Core Intel Core i5, 16 GB 2133 MHz LPDDR3:
 ```
-
+ilssshat$ ./bench.sh 
+With 2    pages and 4000  trials, average access time = 2.095250 ns
+With 4    pages and 4000  trials, average access time = 1.946250 ns
+With 8    pages and 4000  trials, average access time = 1.874969 ns
+With 16   pages and 4000  trials, average access time = 8.965531 ns
+With 32   pages and 4000  trials, average access time = 9.328101 ns
+With 64   pages and 4000  trials, average access time = 9.130352 ns
+With 128  pages and 4000  trials, average access time = 9.835205 ns
+With 256  pages and 4000  trials, average access time = 9.819797 ns
+With 512  pages and 4000  trials, average access time = 9.608551 ns
+With 1024 pages and 4000  trials, average access time = 9.792068 ns
+With 2048 pages and 4000  trials, average access time = 12.406692 ns
+With 4096 pages and 4000  trials, average access time = 13.002484 ns
 ```

@@ -13,6 +13,11 @@ unsigned time_diff(const struct timeval tm1, const struct timeval tm2) {
 }
 
 int main(int argc, char* argv[]) {
+    cpu_set_t cpu_mask;
+    CPU_ZERO(&cpu_mask);
+    CPU_SET(1, &cpu_mask);
+    pthread_setaffinity_np(0, sizeof(cpu_mask), &cpu_mask);
+
     if (argc < 3) {
         fprintf(stderr, "Two arguments are required: numpages<int>, trials<int>\n");
         exit(1);

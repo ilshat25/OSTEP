@@ -18,3 +18,4 @@ I do exercises and make some notes while reading a book.
 - [18. Paging: Introduction](https://github.com/ilshat25/OSTEP/tree/main/18.paging-intro/exercises/README.md)
 - [19. Paging: TLBs](https://github.com/ilshat25/OSTEP/tree/main/19.paging-tlbs/exercises/README.md)
 - [20. Paging: Small Tables](https://github.com/ilshat25/OSTEP/tree/main/20.paging-small-tables/exercises/README.md)
+- [21. Paging: Beyound Phisical Mmeory](https://github.com/ilshat25/OSTEP/tree/main/21.beyound-phys/exercises/README.md)
